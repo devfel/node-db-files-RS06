@@ -23,8 +23,8 @@ Este é um aplicativo de gerenciamento de transações para praticar Node.js jun
 
 ## 📝 Table of Contents
 
-- [Sobre](#about)
-- [Primeiros passos](#getting_started)
+- [Rotas da Aplicação](#about)
+- [Primeiros Passos](#getting_started)
 - [Ferramentas Utilizadas](#built_using)
 - [Dependências](#dependencies)
 - [Autor](#authors)
@@ -32,7 +32,7 @@ Este é um aplicativo de gerenciamento de transações para praticar Node.js jun
 
 ---
 
-## 🧐 Application Routes <a name = "about"></a>
+## 🧐 Rotas da Aplicação <a name = "about"></a>
 
 - **_POST /transactions:_** Essa rota é responsável pela criação de transações financeiras. A rota recebe título, valor, tipo e categoria dentro do corpo da solicitação. O tipo deve ser income ou outcome apenas. Ao registrar uma nova transação, ela será armazenada no banco de dados contendo os campos id, título, valor, tipo, category_id, created_at, updated_at. Além disso, a categoria é uma tabela separada. Antes de criar uma nova categoria, o sistema verifica se já existe uma categoria com o mesmo título. Se existir, usa a id da categoria que já existe no banco de dados.
 - **_GET /transactions:_** Esta rota retorna uma listagem de todas as transações registradas até o momento, junto com a soma das entradas, saques e o crédito total.
@@ -41,14 +41,14 @@ Este é um aplicativo de gerenciamento de transações para praticar Node.js jun
 
 ---
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+## 🏁 Primeiros Passos <a name = "getting_started"></a>
 
 Para obter uma cópia deste projeto e executar em sua máquina local para fins de desenvolvimento e teste, você precisará clonar o projeto, execute o comando "yarn" em seu terminal para instalar todas as dependências e executar o comando "yarn dev:server" para iniciar o servidor.
 É importante notar que este projeto requer um banco de dados em execução, sugiro que você use Docker juntamente com Insomnia e DBeaver.
 
 ---
 
-## ⛏️ Built Using <a name = "built_using"></a>
+## ⛏️ Ferramentas Utilizadas <a name = "built_using"></a>
 
 - [PostgreSQL](https://www.postgresql.org/) - Database
 - [Express](https://expressjs.com/) - Server Framework
@@ -60,7 +60,7 @@ Para obter uma cópia deste projeto e executar em sua máquina local para fins d
 
 ---
 
-## 🔁 Dependencies <a name = "dependencies"></a>
+## 🔁 Dependências <a name = "dependencies"></a>
 
 Algumas dependências e bibliotecas do projeto incluem, mas não estão limitadas a:
 
