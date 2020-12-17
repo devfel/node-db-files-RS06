@@ -3,7 +3,9 @@
  <img  src="https://devfel.com/imgs/devfel-logo-01.JPG" alt="DevFel"></a>
 </p>
 
-<h1 align="center">GoFinance - Backend</h1>
+<h1 align="center">RocketSeat Challenge 06</h1>
+<h3 align="center">GoFinance - Backend - pt-BR</h3>
+
 
 <div align="center">
 
@@ -15,35 +17,34 @@
 ---
 
 <p align="center"> 
-In this backend application I developed a transaction management application in order to get practice with Node.js together with TypeScript including the use of a Postgres database with TypeORM and sending files with Multer. This application allows the storage of incomes and outcomes financial transactions and allow the registration and listing of those transactions, in addition to allowing the creation of new records in the database by sending a csv file.
-  </p>
+Este é um aplicativo de gerenciamento de transações para praticar Node.js juntamente com TypeScript, incluindo o uso de um banco de dados Postgres com TypeORM e envio de arquivos com Multer. Este aplicativo permite o armazenamento de transações financeiras com entradas e saídas. Além disso o app permite o registro e listagem dessas transações, a criação de novos registros na base de dados, a remoção desses registros, e o envio de um arquivo csv para inserir várias transações simultaneamente.  </p>
 
 ---
 
 ## 📝 Table of Contents
 
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Built Using](#built_using)
-- [Dependencies](#dependencies)
-- [Author](#authors)
-- [Acknowledgments](#acknowledgement)
+- [Sobre](#about)
+- [Primeiros passos](#getting_started)
+- [Ferramentas Utilizadas](#built_using)
+- [Dependências](#dependencies)
+- [Autor](#authors)
+- [Agradecimentos](#acknowledgement)
 
 ---
 
 ## 🧐 Application Routes <a name = "about"></a>
 
-- **_POST /transactions:_** The route must receive title, value, type, and category within the body of the request. Type must be income or outcome only. When registering a new transaction, it will be stored within the database having the fields id, title, value, type, category_id, created_at, updated_at. Also the category is an separated table. Before creating a new category the system checks if a category with the same title already exists. If it exists, use the id that already exists in the database.
-- **_GET /transactions:_** This route return a listing of all the transactions registered so far, along with the sum of the entries, withdrawals and total credit.
-- **_DELETE /transactions/:id:_** This route delete a transaction with the id present in the route parameters;
-- **_POST /transactions/import:_** The backend allow the import of a .csv file containing the same information needed to create a transaction: id, title, value, type, category_id, created_at, updated_at, where each line of the CSV file must be a new record for the database, and finally return all transactions that have been imported into your database.
+- **_POST /transactions:_** Essa rota é responsável pela criação de transações financeiras. A rota recebe título, valor, tipo e categoria dentro do corpo da solicitação. O tipo deve ser income ou outcome apenas. Ao registrar uma nova transação, ela será armazenada no banco de dados contendo os campos id, título, valor, tipo, category_id, created_at, updated_at. Além disso, a categoria é uma tabela separada. Antes de criar uma nova categoria, o sistema verifica se já existe uma categoria com o mesmo título. Se existir, usa a id da categoria que já existe no banco de dados.
+- **_GET /transactions:_** Esta rota retorna uma listagem de todas as transações registradas até o momento, junto com a soma das entradas, saques e o crédito total.
+- **_DELETE /transactions/:id:_** Esta rota exclui uma transação com o id presente nos parâmetros da rota;
+- **_POST /transactions/import:_** O backend permite ainda a importação de um arquivo .csv contendo as mesmas informações necessárias para criar uma transação: id, título, valor, tipo e categoria, onde cada linha de o arquivo CSV deve ser um novo registro para o banco de dados e, finalmente, retorna todas as transações que foram importadas para o seu banco de dados.
 
 ---
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-In order to get a copy of this project an run on your local machine for development and testing purposes you will need to clone the project, run the "yarn" command on your terminal to install all the dependencies and execute the command "yarn dev:server".
-It is important to note that this project requires a running database, I suggest you use Docker toghether with Insomnia and DBeaver.
+Para obter uma cópia deste projeto e executar em sua máquina local para fins de desenvolvimento e teste, você precisará clonar o projeto, execute o comando "yarn" em seu terminal para instalar todas as dependências e executar o comando "yarn dev:server" para iniciar o servidor.
+É importante notar que este projeto requer um banco de dados em execução, sugiro que você use Docker juntamente com Insomnia e DBeaver.
 
 ---
 
@@ -61,7 +62,7 @@ It is important to note that this project requires a running database, I suggest
 
 ## 🔁 Dependencies <a name = "dependencies"></a>
 
-Some project library dependencies includes but are not limited to:
+Algumas dependências e bibliotecas do projeto incluem, mas não estão limitadas a:
 
 - "cors": "^2.8.5",
 - "csv-parse": "^4.8.8",
@@ -84,4 +85,4 @@ Some project library dependencies includes but are not limited to:
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Challenge proposed by Rocket Seat within the gostack 14 bootcamp.
+- Agradecimento a equipe da RocketSeat pela proposta desse desafio e os ensinamentos até aqui. (Turma - Bootcamp GoStack 14)
