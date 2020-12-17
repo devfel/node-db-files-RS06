@@ -3,7 +3,7 @@
  <img  src="https://devfel.com/imgs/devfel-logo-01.JPG" alt="DevFel"></a>
 </p>
 
-<h1 align="center">RocketSeat Challenge 06</h1>
+<h1 align="center">RocketSeat Desafio 06 - Bootcamp GoStack Turma 14 </h1>
 <h3 align="center">GoFinance - Backend - pt-BR</h3>
 
 
@@ -77,7 +77,7 @@ Algumas dependências e bibliotecas do projeto incluem, mas não estão limitada
 
 ---
 
-## ✍️ Author <a name = "authors"></a>
+## ✍️ Autor <a name = "authors"></a>
 
 - [@devfel](https://github.com/devfel) - Luiz Flávio Felizardo
 
